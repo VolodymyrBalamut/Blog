@@ -1,4 +1,4 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+<!--<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
@@ -55,4 +55,5 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).-->
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/66db7281c2284385a5cd4d6b4d104c04)](https://www.codacy.com/app/VolodymyrBalamut/AirportInfo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=VolodymyrBalamut/AirportInfo&amp;utm_campaign=Badge_Grade)
