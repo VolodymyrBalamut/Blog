@@ -56,4 +56,4 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).-->
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/66db7281c2284385a5cd4d6b4d104c04)](https://www.codacy.com/app/VolodymyrBalamut/AirportInfo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=VolodymyrBalamut/AirportInfo&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e64e67691322460aa8d66e31ee96ff70)](https://www.codacy.com/app/VolodymyrBalamut/Blog?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=VolodymyrBalamut/Blog&amp;utm_campaign=Badge_Grade)
