@@ -32,4 +32,8 @@ class PagesController extends Controller{
 		$data["telephone"] = $telephone;
 		return view('pages.contact')->withData($data);
 	}
+
+	/*public function getTryAngular(){
+		return view('pages.tryAngular');
+	}*/
 }
