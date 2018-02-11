@@ -8,6 +8,12 @@
 
     <div class="container">
       @include('partials._messages')
+
+      @if (session('status'))
+          <div class="alert alert-success">
+              {{ session('status') }}
+          </div>
+      @endif
       @yield('content')
 
       @include('partials._footer')

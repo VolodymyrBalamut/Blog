@@ -7,18 +7,32 @@
 		<div class="col-md-8">
 			<h1>{{ $post->title }}</h1>
 			<p class="lead">{{ $post->body }}</p>
+			<hr>
+			<div class="tag">
+				@foreach($post->tags as $tag)
+					<span class="label label-default">{{ $tag->name }}</span>
+				@endforeach
+			</div>
 		</div>
 
 		<div class="col-md-4">
 			<div class="well">
 				<dl class="dl-horizontal">
-					<dt>Created At:</dt>
-					<dd>{{ date('M j, Y H:i',strtotime($post->created_at)) }}</dd>
+					<label>URL:</label>
+					<p><a href="{{ route('blog.single',$post->slug) }}">{{ route('blog.single',$post->slug) }}</a></p>
+				</dl>
+				<dl class="dl-horizontal">
+					<label>Category:</label>
+					<p>{{ $post->category->name }}</p>
+				</dl>
+				<dl class="dl-horizontal">
+					<label>Created At:</label>
+					<p>{{ date('M j, Y H:i',strtotime($post->created_at)) }}</p>
 				</dl>
 				
 				<dl class="dl-horizontal">
-					<dt>Last Updated:</dt>
-					<dd>{{ date('M j, Y H:i',strtotime($post->updated_at)) }}</dd>
+					<label>Last Updated:</label>
+					<p>{{ date('M j, Y H:i',strtotime($post->updated_at)) }}</p>
 				</dl>
 				<hr>
 
@@ -34,6 +48,12 @@
 						</form>﻿
 					</div>
 				</div>
+				<div class="row">
+				  <div class="col-sm-12">
+				    <br>
+				    <a href="{{ route('posts.index') }}" class="btn btn-default btn-block">Show all Posts</a>
+				  </div>
+				</div><!-- /.row -->﻿
 			</div>
 		</div>
 	</div>

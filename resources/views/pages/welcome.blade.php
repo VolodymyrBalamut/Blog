@@ -15,34 +15,16 @@
 
         <div class="row">
             <div class="col-md-8">
+
+                @foreach($posts as $post)
                 <div class="post">
-                    <h1>Post Title</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <a href="#" class="btn btn-primary">Read More</a>
+                    <h1>{{ $post->title }}</h1>
+                    <p>{{ substr($post->body, 0,300) }}{{ strlen($post->body)>300 ? "...":"" }}</p>
+                    <a href="{{ url('blog/'.$post->slug) }}" class="btn btn-primary">Read More</a>
                 </div>
 
                 <hr>
-                 <div class="post">
-                    <h1>Post Title</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <a href="#" class="btn btn-primary">Read More</a>
-                </div>
-
-                <hr>
-                 <div class="post">
-                    <h1>Post Title</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <a href="#" class="btn btn-primary">Read More</a>
-                </div>
-
-                <hr>
-                 <div class="post">
-                    <h1>Post Title</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
-                    <a href="#" class="btn btn-primary">Read More</a>
-                </div>
-
-                <hr>
+                @endforeach
                  
             </div>
             <div class="col-md-3 col-md-offset-1">
