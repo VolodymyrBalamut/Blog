@@ -5,12 +5,14 @@
 @section('content')
 		<div class="row">
 			<div class="col-md-8">
-				<h1>Catefories</h1>
+				<h1>Categories</h1>
 				<table class="table">
 					<thead>
 						<tr>
 							<th>#</th>
 							<th>Name</th>
+							<th></th>
+							<th></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -18,6 +20,8 @@
 						<tr>
 							<th>{{ $category->id }}</th>
 							<td>{{ $category->name }}</td>
+							<td><a href="{{ route('categories.show',$category->id) }}">View</a></td>
+							<td><a href="{{ route('categories.edit',$category->id) }}">Edit</a></td>
 						</tr>
 						@endforeach
 					</tbody>

@@ -10,8 +10,12 @@
 			<hr>
 			<div class="tag">
 				@foreach($post->tags as $tag)
-					<span class="label label-default">{{ $tag->name }}</span>
+					<a href="{{ route("tags.show", $tag->id) }}"><span class="label label-default">{{ $tag->name }}</span></a>
 				@endforeach
+			</div>
+
+			<div id="backend-comments" style="margin-top: 50px;">
+				<h3>Comments <small>{{ $post->comments()->count() }} total</small></h3>
 			</div>
 		</div>
 
