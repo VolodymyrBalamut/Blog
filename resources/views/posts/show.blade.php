@@ -6,7 +6,7 @@
 	<div class="row">
 		<div class="col-md-8">
 			<h1>{{ $post->title }}</h1>
-			<p class="lead">{{ $post->body }}</p>
+			<p class="lead">{!! $post->body !!}</p>
 			<hr>
 			<div class="tag">
 				@foreach($post->tags as $tag)
@@ -16,6 +16,34 @@
 
 			<div id="backend-comments" style="margin-top: 50px;">
 				<h3>Comments <small>{{ $post->comments()->count() }} total</small></h3>
+
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Email</th>
+							<th>Comment</th>
+							<th width="70px;"></th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach($post->comments as $comment)
+							<tr>
+								<td>{{ $comment->name }}</td>
+								<td>{{ $comment->email }}</td>
+								<td>{{ $comment->comment }}</td>
+								<td>
+									<a href="{{ route('comments.edit', $comment->id) }}" class="btn btn-xs btn-primary">
+										<i class="fas fa-pencil-alt"></i>
+									</a>
+									<a href="{{ route('comments.delete', $comment->id) }}" class="btn btn-xs btn-danger">
+										<i class="fas fa-trash-alt"></i>
+									</a>
+								</td>
+							</tr>
+						@endforeach
+					</tbody>
+				</table>
 			</div>
 		</div>
 
@@ -61,4 +89,9 @@
 			</div>
 		</div>
 	</div>
+@endsection
+
+@section("scripts")
+	<!--<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>-->
+	<script  src="{{ URL::asset('js/fontawesome-all.min.js') }}" type="text/javascript"></script>
 @endsection

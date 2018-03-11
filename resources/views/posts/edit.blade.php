@@ -4,6 +4,14 @@
 
 @section('stylesheets')
 	<link rel="stylesheet" href="{{ URL::asset('css/select2.min.css') }}">
+	<script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+	<script>
+		tinymce.init({ 
+			selector:'#body',
+			plugons: 'link',
+			menubar: false
+		});
+	</script>
 @endsection
 
 @section('content')

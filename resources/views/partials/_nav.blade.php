@@ -19,6 +19,7 @@
             @auth
             <li class="{{ Request::is("posts") ? "active" : ""}}"><a href="/posts">Posts</a></li>
             <li class="{{ Request::is("records") ? "active" : ""}}"><a href="/records">Records</a></li>
+            <li class="{{ Request::is("clips") ? "active" : ""}}"><a href="{{ route('clips.index') }}">Clips</a></li>
             @endauth
             <li class="{{ Request::is("about") ? "active" : ""}}"><a href="/about">About</a></li>
             <li class="{{ Request::is("contact") ? "active" :""}}"><a href="/contact">Contact</a></li>
@@ -32,6 +33,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hello {{ Auth::user()->name }} <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="{{ route('posts.index') }}">Posts</a></li>
+                <li><a href="{{ route('clips.index') }}">Clips</a></li>
                 <li><a href="{{ route('categories.index') }}">Categories</a></li>
                 <li><a href="{{ route('tags.index') }}">Tags</a></li>
                 <li><a href="/records">Records</a></li>

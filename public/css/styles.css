@@ -46,3 +46,16 @@
 .comments-icon {
 	margin-right: 5px;
 }
+
+.views {
+	font-size:16px;
+	line-height: 1.3em;
+	color: #aaa;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.views span {
+	margin-right: 10px; 
+}
+
