@@ -15,7 +15,7 @@
 @endsection
 
 @section('content')
-	<form method="POST" action="{{ route('posts.update', $post->id) }}">
+	<form method="POST" action="{{ route('posts.update', $post->id) }}" enctype="multipart/form-data">
 	  <div class="row">
 	  	<div class="col-md-8">
 	      <div class="form-group">
@@ -43,6 +43,10 @@
 		      		@endforeach
 		      	</select>
 		    </div>  
+		  <div class="form-group">
+				<label name="title">Image:</label>
+				<input type="file" name="featured_image" id="featured_image" value="{{ $post->image }}">
+		  </div>
 	      <div class="form-group form-spacing-top">
 	        <label for="body">Body:</label>
 	        <textarea type="text" class="form-control input-lg" id="body" name="body" rows="10">{{ $post->body }}</textarea>

@@ -21,7 +21,7 @@
 		  <div class="col-md-8 col-md-offset-2">
 		    <h1>Create New Post</h1>
 		    <hr>
-		    <form method="POST" action="{{ route('posts.store') }}" data-parsley-validate="">
+		    <form method="POST" action="{{ route('posts.store') }}" data-parsley-validate="" enctype="multipart/form-data">
 		      <div class="form-group">
 		        <label name="title">Title:</label>
 		        <input id="title" name="title" class="form-control" required="" maxlength="255">
@@ -47,7 +47,10 @@
 		      		@endforeach
 		      	</select>
 		      </div>
-
+		      <div class="form-group">
+				<label name="title">Image:</label>
+				<input type="file" name="featured_image" id="featured_image">
+			  </div>
 		      <div class="form-group">
 		        <label name="body">Post Body:</label>
 		        <textarea id="body" name="body" rows="10" class="form-control"></textarea>
